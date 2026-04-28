@@ -430,3 +430,70 @@ screenshots/image-7.png
 - 專案根目錄已沒有 `image*.png`。
 - `screenshots/` 內包含所有圖片。
 - `README.md` 圖片引用已改為 `screenshots/...`。
+
+### User
+
+```text
+然後推到 https://github.com/Williecraft/AIoT-DIC-Regression_Explorer.git
+```
+
+### Assistant
+
+協助將目前專案推送到指定 GitHub repository。
+
+執行過程摘要：
+
+- 檢查目前資料夾是否為 git repository。
+- 發現尚未初始化 git。
+- 新增 `.gitignore`，排除：
+  - `__pycache__/`
+  - Python bytecode
+  - 虛擬環境資料夾
+  - Streamlit secrets
+  - `streamlit.out.log`
+  - `streamlit.err.log`
+  - `*.joblib`
+- 執行：
+
+```powershell
+git init -b main
+```
+
+- 因本機未設定 git 作者資訊，於此 repo 內設定 local git config：
+
+```powershell
+git config user.name "Williecraft"
+git config user.email "Williecraft@users.noreply.github.com"
+```
+
+- 設定 remote：
+
+```powershell
+git remote add origin https://github.com/Williecraft/AIoT-DIC-Regression_Explorer.git
+```
+
+- 建立初始 commit：
+
+```powershell
+git add .gitignore README.md app.py chat.md requirements.txt screenshots start_app.bat
+git commit -m "Initial CRISP-DM regression explorer"
+```
+
+- 推送到 GitHub：
+
+```powershell
+git push -u origin main
+```
+
+推送結果：
+
+```text
+branch 'main' set up to track 'origin/main'.
+main -> main
+```
+
+Repository:
+
+```text
+https://github.com/Williecraft/AIoT-DIC-Regression_Explorer.git
+```
