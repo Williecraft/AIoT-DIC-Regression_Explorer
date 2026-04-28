@@ -497,3 +497,85 @@ Repository:
 ```text
 https://github.com/Williecraft/AIoT-DIC-Regression_Explorer.git
 ```
+
+### User
+
+```text
+教我怎麼用到一個在github上面可以點的網站
+streamlit
+```
+
+### Assistant
+
+說明如何將目前 GitHub repository 部署成可點擊的 Streamlit 網站。
+
+教學重點：
+
+- GitHub Pages 不能直接執行 Streamlit，因為 Streamlit 需要 Python server。
+- 正確做法是使用 Streamlit Community Cloud 部署 GitHub repo。
+- 部署完成後會得到一個 `https://xxxxx.streamlit.app` 網址。
+- 再將該網址加入 GitHub `README.md`，就能在 GitHub 頁面上點擊開啟網站。
+
+目前專案已具備部署條件：
+
+- GitHub repository 已建立並推送。
+- 主程式在 repo 根目錄的 `app.py`。
+- 依賴套件在 repo 根目錄的 `requirements.txt`。
+- branch 為 `main`。
+
+建議部署設定：
+
+```text
+Repository: Williecraft/AIoT-DIC-Regression_Explorer
+Branch: main
+Main file path: app.py
+```
+
+部署完成後，可在 `README.md` 加入：
+
+```markdown
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://你的網址.streamlit.app)
+```
+
+或：
+
+```markdown
+## Live Demo
+
+[Open Streamlit App](https://你的網址.streamlit.app)
+```
+
+### User
+
+```text
+https://aiot-dic-regression-explorer.streamlit.app/
+幫我加進去 然後 commit push
+```
+
+### Assistant
+
+協助將 Streamlit app 網址加入 `README.md`，並提交推送到 GitHub。
+
+新增網址：
+
+```text
+https://aiot-dic-regression-explorer.streamlit.app/
+```
+
+README 新增內容：
+
+```markdown
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aiot-dic-regression-explorer.streamlit.app/)
+
+## Live Demo
+
+[Open Streamlit App](https://aiot-dic-regression-explorer.streamlit.app/)
+```
+
+接著執行：
+
+```powershell
+git add README.md chat.md
+git commit -m "Add Streamlit live demo link"
+git push
+```

@@ -1,5 +1,11 @@
 # CRISP-DM Regression Explorer 專案報告
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aiot-dic-regression-explorer.streamlit.app/)
+
+## Live Demo
+
+[Open Streamlit App](https://aiot-dic-regression-explorer.streamlit.app/)
+
 ## 摘要
 
 本專案建立一個單檔 Streamlit 應用程式 `app.py`，用於示範 CRISP-DM 方法論在簡單線性回歸問題中的完整流程。應用程式會產生符合指定分布的合成資料，透過 scikit-learn 完成資料切分、標準化、線性迴歸建模與模型評估，並提供互動式視覺化、參數比較、單點預測與 joblib 模型匯出功能。
